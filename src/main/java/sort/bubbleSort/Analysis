@@ -1,0 +1,16 @@
+thuật toán được so sánh thực hiện để sắp xếp các phần từ trong mảng
+- 1 0 11 7 3 4
+thực hiện từ vị trí đầu tiên của mảng đến cuối cùng
+so sánh 2 phần từ liền kề nhau ( trong trường hợp sắp xếp tăng dần)
+nếu phần từ đầu tiền (1) với phần tử thứ 2 (0) 1>0
+tiến hành đổi chỗ 1 và 0 => có 1 mảng mới như sau
+- 0 1 11 7 3 4
+thực hiện lần lượt tới vị trí cuối cùng của mảng ta sẽ sắp xếp được 1 phần tử của mảng vào đúng vị trí của nó
+từ đó suy ra với sẽ có chắc chắn 1 phần tử của mảng được sx đúng vị trí trong lần đầu tiên duyệt
+nên ở trong lần duyệt tiếp theo sẽ chỉ duyệt đến phần tử thứ n-2 tức là bỏ phần tử thứ n-1 ( vì nó đã nằm đúng vị trí)
+- 0 1 11 7 3 4
+- 0 1 7 11 3 4
+- 0 1 7 3 11 4
+- 0 1 7 3 4 11
+=> ta có mảng mới được sắp xếp tăng dần từ trái sang phải
+
