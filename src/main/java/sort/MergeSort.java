@@ -3,7 +3,9 @@ package sort;
 import java.util.Arrays;
 
 public class MergeSort {
-
+    // divide and conquer
+    // using recursion and divide to become new array ( better the original array)
+    // merging array when the new array just only one element
     public static int[] mergeSort(int[] arr, int left, int right) {
         // break point and limit
         if (left > right) {
