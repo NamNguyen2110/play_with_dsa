@@ -1,1 +1,0 @@
-chọn pivot là phần tử có quá trị ở giữa mảng

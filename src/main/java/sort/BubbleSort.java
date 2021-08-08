@@ -1,8 +1,8 @@
-package sort.bubbleSort;
+package sort;
 
 import java.util.Arrays;
 
-public class Code {
+public class BubbleSort {
 
     public static int[] bubbleSort(int[] a) {
         for (int i = 0; i < a.length - 1; i++) {

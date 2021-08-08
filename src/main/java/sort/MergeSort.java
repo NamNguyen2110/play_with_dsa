@@ -1,8 +1,8 @@
-package sort.mergeSort;
+package sort;
 
 import java.util.Arrays;
 
-public class Code {
+public class MergeSort {
 
     public static int[] mergeSort(int[] arr, int left, int right) {
         // break point and limit
@@ -15,10 +15,10 @@ public class Code {
         }
         // divide
         System.out.println("DIVIDE INTO AT: " + left + " - " + right);
-        int pivot = (left + right) / 2;
-        int[] leftArr = mergeSort(arr, left, pivot);
+        int middle = (left + right) / 2;
+        int[] leftArr = mergeSort(arr, left, middle);
         System.out.println("LEFT ARRAY: " + Arrays.toString(leftArr));
-        int[] rightArr = mergeSort(arr, pivot + 1, right);
+        int[] rightArr = mergeSort(arr, middle + 1, right);
         System.out.println("RIGHT ARRAY: " + Arrays.toString(rightArr));
         // merge
         System.out.println("=====> MERGE ARRAY RESULT: " + Arrays.toString(mergeLeftAndRightArray(leftArr, rightArr)));
