@@ -1,6 +1,6 @@
 package interview;
 
-import dsa.array.DynamicArray;
+import dsa.DynamicArray;
 
 public class Solution {
     public static void main(String[] args) {
