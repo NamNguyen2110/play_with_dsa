@@ -1,4 +1,4 @@
-package dsa;
+package dsa.array;
 
 import java.util.Iterator;
 
