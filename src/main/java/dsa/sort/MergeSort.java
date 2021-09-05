@@ -1,4 +1,4 @@
-package sort;
+package dsa.sort;
 
 import java.util.Arrays;
 
@@ -13,7 +13,6 @@ public class MergeSort {
         }
         if (left == right) {
             return new int[]{arr[left]};
-
         }
         // divide
         System.out.println("DIVIDE INTO AT: " + left + " - " + right);
@@ -66,8 +65,8 @@ public class MergeSort {
         int[] leftArr = {1, 2, 4, 3};
         int[] rightArr = {6, 9, 7, 8};
         int[] resultArr = {9,3,8,1,5,3,7};
-//        System.out.println(Arrays.toString(mergeLeftAndRightArray(leftArr, rightArr)));
-        System.out.println(Arrays.toString(sortArray(resultArr, 0, resultArr.length - 1)));
+        System.out.println(Arrays.toString(mergeLeftAndRightArray(leftArr, rightArr)));
+//        System.out.println(Arrays.toString(sortArray(resultArr, 0, resultArr.length - 1)));
     }
 
 
