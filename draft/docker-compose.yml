@@ -1,0 +1,51 @@
+version: '3'
+services:
+  MPBX_ACD_ORACLE:
+    image: oracleinanutshell/oracle-xe-11g
+    volumes:
+      - /home/ngocquang131199/test:/opt/oracle/oradata
+    ports:
+      - "1523:1521"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: 123456a@
+      MYSQL_DATABASE: MPBX_ACD
+      MYSQL_USER: MPBX_ACD
+      MYSQL_PASSWORD: MPBX_ACD#123
+    networks:
+      - MPBX-network
+  MPBX_CCMS_ORACLE:
+    image: oracleinanutshell/oracle-xe-11g
+    volumes:
+      - /home/ngocquang131199/test:/opt/oracle/oradata
+    ports:
+      - "1524:1521"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: 123456a@
+      MYSQL_DATABASE: MPBX_CCMS
+      MYSQL_USER: MPBX_CCMS
+      MYSQL_PASSWORD: MPBX_CCMS#123
+    networks:
+      - MPBX-network
+  MPBX_VSA_ORACLE:
+    image: oracleinanutshell/oracle-xe-11g
+    volumes:
+      - /home/ngocquang131199/test:/opt/oracle/oradata
+    ports:
+      - "1524:1521"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: 123456a@
+      MYSQL_DATABASE: MPBX_VSA
+      MYSQL_USER: MPBX_VSA
+      MYSQL_PASSWORD: MPBX_VSA#123
+    networks:
+      - MPBX-network
+networks:
+  MPBX-network:
+    driver: bridge
+volumes:
+  MPBX-volumes:
+
+docker run -d -p 49160:22 -p 1523:1521 -e ORACLE_ALLOW_REMOTE=true MYSQL_ROOT_USER=root MYSQL_ROOT_PASSWORD=123456a@ MYSQL_DATABASE=MPBX_ACD MYSQL_USER=MPBX_ACD MYSQL_PASSWORD=MPBX_ACD#123 oracleinanutshell/oracle-xe-11g
