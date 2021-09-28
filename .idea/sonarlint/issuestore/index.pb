@@ -11,5 +11,3 @@ n
 >src/main/java/pattern/behavioral/strategy/PromoteStrategy.java,2/6/263e8eafc495cdf1b260f2c3fad3202080eff364
 v
 Fsrc/main/java/pattern/behavioral/strategy/QuarterDiscountStrategy.java,c/7/c7ddba12381843fcc2a14d4f4de42c7961a9db0b
-L
-src/main/java/jdbc/Code.java,d/a/da8d9b4844aa75d441b92ae7957a198a05927fa8
